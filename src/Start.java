@@ -14,19 +14,19 @@ public class Start {
     public void start() {
         Scanner sc = new Scanner(System.in);
 
-        while (true) { // Добавил цикл для повторных действий
+        while (true) {
             System.out.println("\nВыберите: " +
                     "\n1 Создать Task" +
                     "\n2 Посмотреть все Task" +
                     "\n3 Выйти");
 
             int input = sc.nextInt();
-            sc.nextLine(); // Очищаем буфер после nextInt()
+            sc.nextLine();
 
             if (input == 1) {
-                createTask(sc); // Вызываем отдельный метод
+                createTask(sc);
             } else if (input == 2) {
-                showTask(); // Вызываем отдельный метод
+                showTask();
             } else if (input == 3) {
                 System.out.println("Пока");
                 break;
@@ -79,8 +79,8 @@ class Task {
     public Task(String name, String description) {
         this.name = name;
         this.description = description;
-        this.id = new Random().nextInt(10000); // Генерируем случайный ID
-        this.date = LocalDate.now(); // Устанавливаем текущую дату
+        this.id = new Random().nextInt(10000);
+        this.date = LocalDate.now();
     }
 
     public String getName() {
